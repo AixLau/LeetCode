@@ -1,6 +1,5 @@
-package com.stackandqueue;
+package com.stackqueue;
 
-import java.util.Iterator;
 import java.util.Stack;
 
 public class _232 {
@@ -33,10 +32,9 @@ class MyQueue {
 
         return stackOut.empty() && stackIn.empty();
     }
-    private void dumpStackIn(){
+
+    private void dumpStackIn() {
         if (!stackOut.isEmpty()) return;
-        while (!stackIn.isEmpty()){
-            stackOut.push(stackIn.pop());
-        }
+        while (!stackIn.isEmpty()) stackOut.push(stackIn.pop());
     }
 }

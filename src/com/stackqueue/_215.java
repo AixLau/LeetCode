@@ -1,4 +1,4 @@
-package com.stackandqueue;
+package com.stackqueue;
 
 import java.util.PriorityQueue;
 
