@@ -3,7 +3,9 @@ package com.map;
 import com.tree.Solution;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class _417 {
 
@@ -50,6 +52,20 @@ public class _417 {
         if (i < 0 || i >= m || j < 0 || j >= n || visited[i][j] || heights[i][j] < prevHeight) return;
         visited[i][j] = true;
         for (int[] dir : dirs) dfs(heights, i + dir[0], j + dir[1], visited, heights[i][j]);
+    }
+
+    private void bfs(int[][] heights, int i, int j, boolean[][] visited) {
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[]{i, j});
+        int prevHeight;
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int x = current[0], y = current[1];
+            visited[x][y] = true;
+            prevHeight = heights[i][j];
+            if (i > 0 || i < m || j > 0 || j <= n || visited[i][j] || heights[i][j] < prevHeight)
+                for (int[] dir : dirs) dfs(heights, i + dir[0], j + dir[1], visited, heights[i][j]);
+        }
     }
 
     public static void main(String[] args) {
