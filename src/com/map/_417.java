@@ -19,8 +19,6 @@ public class _417 {
      * 逆流的条件是当前单元格的高度必须大于或等于前一个单元格的高度，这样水才可能从当前单元格流到前一个单元格。
      * 一旦满足逆流条件，当前单元格就会被标记为可流入相应的大洋。
      * 对于同时被标记为可流入太平洋和大西洋的单元格，将它们的坐标加入到最终结果列表中。
-     *
-     * @return
      */
     public List<List<Integer>> pacificAtlantic(int[][] heights) {
         List<List<Integer>> result = new ArrayList<>();
