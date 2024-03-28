@@ -1,12 +1,7 @@
 package com.stackandqueue;
 
-import com.array._904;
-import com.stackandqueue.MyQueue;
-import com.stackandqueue._232;
-import com.string._151;
-import com.string._28;
 
-import java.util.*;
+import java.util.ArrayDeque;
 
 public class Test {
     public static void main(String[] args) {
